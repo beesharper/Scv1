@@ -61,7 +61,7 @@ const Header = () => {
   }} className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#FBF9F6]/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <nav className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center">
-          <img src="https://horizons-cdn.hostinger.com/5598ff09-b6ae-4ce7-8318-464a195c2a7f/gemini_generated_image_iw6vkyiw6vkyiw6v-2-VDaya.png" alt="Sharp & Crafty Logo" className="h-12 md:h-14 w-auto" />
+          <img src="/assets/gemini_generated_image_iw6vkyiw6vkyiw6v-2-VDaya.png" alt="Sharp & Crafty Logo" className="h-12 md:h-14 w-auto" />
         </div>
 
         <div className="hidden md:flex items-center space-x-8">

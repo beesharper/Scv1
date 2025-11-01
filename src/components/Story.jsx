@@ -18,7 +18,7 @@ const Story = () => {
             duration: 0.8
           }} className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img alt="Phebe-Jane Sharp smiling on a beach with ocean in background" className="w-full h-full object-cover aspect-square" src="https://horizons-cdn.hostinger.com/5598ff09-b6ae-4ce7-8318-464a195c2a7f/screenshot-2025-10-25-124258-XkDxn.png" />
+                <img alt="Phebe-Jane Sharp smiling on a beach with ocean in background" className="w-full h-full object-cover aspect-square" src="/assets/screenshot-2025-10-25-124258-XkDxn.png" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D36B5F] rounded-full blur-2xl opacity-30"></div>
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#FDE68A] rounded-full blur-2xl opacity-30"></div>
