@@ -16,7 +16,7 @@ const Footer = () => {
         duration: 0.6
       }} className="text-center">
           <div className="flex items-center justify-center space-x-2 mb-6">
-            <img src="https://horizons-cdn.hostinger.com/5598ff09-b6ae-4ce7-8318-464a195c2a7f/sharp-and-crafty-logo-transp-W6iv4.png" alt="Sharp & Crafty Logo" className="h-36 w-auto" />
+            <img src="/assets/sharp-and-crafty-logo-transp-W6iv4.png" alt="Sharp & Crafty Logo" className="h-36 w-auto" />
           </div>
 
           <p className="text-lg text-[#2F2F2F] mb-6 pacifico">

@@ -33,7 +33,7 @@ const Showcase = () => {
           duration: 0.6,
           delay: 0.1
         }} className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square">
-            <img alt="Custom handcrafted team apparel" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://horizons-cdn.hostinger.com/5598ff09-b6ae-4ce7-8318-464a195c2a7f/screenshot-2025-10-25-113400-hT8Qu.png" />
+            <img alt="Custom handcrafted team apparel" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="/assets/screenshot-2025-10-25-113400-hT8Qu.png" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
               <p className="text-white font-semibold text-lg">Wedding Favors</p>
             </div>
@@ -51,7 +51,7 @@ const Showcase = () => {
           duration: 0.6,
           delay: 0.2
         }} className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square">
-            <img alt="Elegant wedding favors handmade" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://horizons-cdn.hostinger.com/5598ff09-b6ae-4ce7-8318-464a195c2a7f/screenshot-2025-10-25-112235-fizCZ.png" />
+            <img alt="Elegant wedding favors handmade" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="/assets/screenshot-2025-10-25-112235-fizCZ.png" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
               <p className="text-white font-semibold text-lg">Custom Apparel </p>
             </div>
@@ -69,7 +69,7 @@ const Showcase = () => {
           duration: 0.6,
           delay: 0.3
         }} className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square">
-            <img alt="Custom event decor handcrafted" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://horizons-cdn.hostinger.com/5598ff09-b6ae-4ce7-8318-464a195c2a7f/screenshot-2025-10-25-112835-kj8wT.png" />
+            <img alt="Custom event decor handcrafted" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="/assets/screenshot-2025-10-25-112835-kj8wT.png" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
               <p className="text-white font-semibold text-lg">Wedding Favor</p>
             </div>
