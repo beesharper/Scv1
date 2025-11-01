@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Pacifico&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cream-white: #FBF9F6;
+  --dusty-coral: #D36B5F;
+  --charcoal-black: #2F2F2F;
+  --butter-yellow: #FDE68A;
+  --silver-sage: #86968C;
+  --dusty-mauve: #A997AB;
+  --rose-quartz: #EAE0E1;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Baloo 2', cursive;
+  background-color: var(--cream-white);
+  color: var(--charcoal-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+}
+
+.pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-outline-black {
+    text-shadow:
+     -1px -1px 0 #2F2F2F,  
+      1px -1px 0 #2F2F2F,
+     -1px  1px 0 #2F2F2F,
+      1px  1px 0 #2F2F2F;
+  }
+}
