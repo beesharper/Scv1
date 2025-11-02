@@ -3,4 +3,5 @@ dist
 .env
 npm-debug.log
 yarn-error.log
+npm_output.log
 .DS_Store
