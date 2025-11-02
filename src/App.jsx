@@ -22,6 +22,14 @@ const HomePage = () => {
         <meta property="og:image" content="https://sharpcrafty.com/assets/screenshot-2025-10-25-124258-XkDxn.png" />
         <meta property="og:url" content="https://sharpcrafty.com/" />
         <link rel="canonical" href="https://sharpcrafty.com/" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Sharp & Crafty",
+            "url": "https://sharpcrafty.com/"
+          }`}
+        </script>
       </Helmet>
       <div className="min-h-screen bg-[#FBF9F6] w-full overflow-x-hidden">
         <Header />
