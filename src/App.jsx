@@ -21,6 +21,7 @@ const HomePage = () => {
         <meta property="og:description" content="Transform your ideas into beautiful, personalized gifts and decor. Phebe-Jane Sharp lovingly creates custom apparel, party favors, event decor and more in Ottawa Gatineau" />
         <meta property="og:image" content="https://sharpcrafty.com/assets/screenshot-2025-10-25-124258-XkDxn.png" />
         <meta property="og:url" content="https://sharpcrafty.com/" />
+        <link rel="canonical" href="https://sharpcrafty.com/" />
       </Helmet>
       <div className="min-h-screen bg-[#FBF9F6] w-full overflow-x-hidden">
         <Header />
