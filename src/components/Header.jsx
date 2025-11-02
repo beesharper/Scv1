@@ -66,7 +66,7 @@ const Header = () => {
 
         <div className="hidden md:flex items-center space-x-8">
           <NavLink to="showcase" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
-            Our Work
+            Our Craft
           </NavLink>
           <NavLink to="how-it-works" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
             How It Works
@@ -99,7 +99,7 @@ const Header = () => {
       }} className="md:hidden bg-[#FBF9F6] border-t border-[#D36B5F]/20">
             <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
               <NavLink to="showcase" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
-                Our Work
+                Our Craft
               </NavLink>
               <NavLink to="how-it-works" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 How It Works
