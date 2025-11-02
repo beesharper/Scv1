@@ -71,7 +71,7 @@ const Showcase = () => {
         }} className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square">
             <img alt="Custom event decor handcrafted" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="/assets/screenshot-2025-10-25-112835-kj8wT.png" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-              <p className="text-white font-semibold text-lg">Wedding Favor</p>
+              <p className="text-white font-semibold text-lg">Event Decor</p>
             </div>
           </motion.div>
         </div>
