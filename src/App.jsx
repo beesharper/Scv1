@@ -34,7 +34,11 @@ const HomePage = () => {
               "addressLocality": "Gatineau",
               "addressRegion": "Quebec",
               "addressCountry": "CA"
-            }
+            },
+            "sameAs": [
+              "https://www.instagram.com/sharp_craftystudio/",
+              "https://www.facebook.com/p/Sharp-Crafty-Studio-61560759479916/"
+            ]
           }`}
         </script>
       </Helmet>

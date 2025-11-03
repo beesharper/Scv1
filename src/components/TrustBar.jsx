@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
 const testimonials = [{
-  quote: "The most stunning and customized items can be found at Sharp and Crafty Studio. The founder, Phebe and her cousin Maddie have collaborated to create the perfect gift for those seeking a unique present either for themselves or a loved one. I highly recommend their services to anyone wanting a \"WOW\" item at reasonable prices.",
-  author: "Victoria Palado-Lapointe",
+  quote: "Working with Phebe was a dream come true. The final product was beyond our wildest expectations!",
+  author: "Justin Sharp",
   color: "text-[#86968C]"
 }, {
   quote: "The Ottawa One World Grannies are delighted with the mugs we recently ordered, designed by Phebe. The quality is excellent, showing a colourful Solidarity’ quilt made by Canadian grandmothers as well as our name and logo.",
