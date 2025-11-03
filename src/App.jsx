@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import ProductCarousel from '@/components/ProductCarousel';
 import TrustBar from '@/components/TrustBar';
 import Showcase from '@/components/Showcase';
 import HowItWorks from '@/components/HowItWorks';
@@ -46,6 +47,7 @@ const HomePage = () => {
         <Header />
         <main>
           <Hero />
+          <ProductCarousel />
           <TrustBar />
           <Showcase />
           <HowItWorks />
