@@ -27,7 +27,14 @@ const HomePage = () => {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Sharp & Crafty",
-            "url": "https://sharpcrafty.com/"
+            "url": "https://sharpcrafty.com/",
+            "telephone": "613 799 6342",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gatineau",
+              "addressRegion": "Quebec",
+              "addressCountry": "CA"
+            }
           }`}
         </script>
       </Helmet>
