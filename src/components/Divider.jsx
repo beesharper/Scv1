@@ -2,7 +2,7 @@ import React from 'react';
 
 const Divider = () => {
   return (
-    <div className="flex justify-center items-center py-8 px-4 text-text-muted-light dark:text-text-muted-dark">
+    <div className="flex justify-center items-center py-4 px-4 text-text-muted-light dark:text-text-muted-dark bg-transparent">
       <span className="material-symbols-outlined text-2xl">brush</span>
       <div className="flex-grow border-t border-dashed border-current mx-4"></div>
       <span className="material-symbols-outlined text-2xl">content_cut</span>
