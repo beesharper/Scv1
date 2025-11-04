@@ -9,6 +9,7 @@ import HowItWorks from '@/components/HowItWorks';
 import Story from '@/components/Story';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import Divider from '@/components/Divider';
 import { Toaster } from '@/components/ui/toaster';
 
 const HomePage = () => {
@@ -46,10 +47,15 @@ const HomePage = () => {
         <Header />
         <main>
           <Hero />
+          <Divider />
           <TrustBar />
+          <Divider />
           <Showcase />
+          <Divider />
           <HowItWorks />
+          <Divider />
           <Story />
+          <Divider />
           <Contact />
         </main>
         <Footer />
