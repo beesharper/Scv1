@@ -1,12 +1,8 @@
 import React from 'react';
-import clsx from 'clsx';
 
-const Divider = ({ bgClassName }) => {
-  const baseClasses = 'flex justify-center items-center py-2 px-4 text-dusty-coral';
-  const combinedClasses = clsx(baseClasses, bgClassName);
-
+const Divider = () => {
   return (
-    <div className={combinedClasses}>
+    <div className="flex justify-center items-center py-2 px-4 text-dusty-coral bg-transparent">
       <span className="material-symbols-outlined text-xl">brush</span>
       <div className="flex-grow border-t border-dashed border-current mx-4"></div>
       <span className="material-symbols-outlined text-xl">content_cut</span>

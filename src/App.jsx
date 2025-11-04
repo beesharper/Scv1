@@ -9,7 +9,6 @@ import HowItWorks from '@/components/HowItWorks';
 import Story from '@/components/Story';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import Divider from '@/components/Divider';
 import { Toaster } from '@/components/ui/toaster';
 
 const HomePage = () => {
@@ -47,15 +46,10 @@ const HomePage = () => {
         <Header />
         <main>
           <Hero />
-          <Divider bgClassName="bg-gradient-to-br from-[#FBF9F6] via-[#FDE68A]/10 to-[#A997AB]/10" />
           <TrustBar />
-          <Divider bgClassName="bg-gradient-to-br from-[#FDE68A]/20 via-[#A997AB]/20 to-[#86968C]/20" />
           <Showcase />
-          <Divider bgClassName="bg-[#FBF9F6]" />
           <HowItWorks />
-          <Divider bgClassName="bg-gradient-to-br from-[#FDE68A]/20 via-[#A997AB]/20 to-[#86968C]/20" />
           <Story />
-          <Divider bgClassName="bg-[#EAE0E1]" />
           <Contact />
         </main>
         <Footer />
