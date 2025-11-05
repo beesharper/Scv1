@@ -69,7 +69,7 @@ return (
               <div
                 // This overlay is now visible by default on mobile
                 // (no hover needed).
-                className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/80 to-transparent flex items-end p-6"
+                className="absolute inset-0 bg-gradient-to-t from-[#FBF9F6]/80 to-transparent flex items-end p-6"
               >
                 <p className="text-white font-semibold text-lg">{item.title}</p>
               </div>
@@ -98,7 +98,7 @@ return (
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 src={item.imgSrc}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#FBF9F6]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <p className="text-white font-semibold text-lg">{item.title}</p>
               </div>
             </motion.div>
