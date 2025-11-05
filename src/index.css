@@ -57,4 +57,11 @@ html {
      -1px  1px 0 #2F2F2F,
       1px  1px 0 #2F2F2F;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
