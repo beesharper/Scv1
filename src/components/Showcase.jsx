@@ -76,9 +76,6 @@ const Showcase = () => {
                   className="w-full h-full object-cover pointer-events-none"
                   src={item.imgSrc}
                 />
-                <div className="absolute inset-0 flex items-end p-6">
-                  <p className="font-semibold text-lg text-[#2F2F2F]">{item.title}</p>
-                </div>
               </div>
             ))}
           </motion.div>
