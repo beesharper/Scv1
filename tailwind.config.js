@@ -17,6 +17,13 @@ module.exports = {
 		},
 		extend: {
 			colors: {
+        'cream-white': 'var(--cream-white)',
+        'dusty-coral': 'var(--dusty-coral)',
+        'charcoal-black': 'var(--charcoal-black)',
+        'butter-yellow': 'var(--butter-yellow)',
+        'silver-sage': 'var(--silver-sage)',
+        'dusty-mauve': 'var(--dusty-mauve)',
+        'rose-quartz': 'var(--rose-quartz)',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
