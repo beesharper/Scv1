@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const showcaseItems = [
@@ -24,8 +24,22 @@ delay: 0.3
 
 
 const Showcase = () => {
-return (
-    <section id="showcase" className="py-20 bg-[#FBF9F6] relative">
+  const scrollContainerRef = useRef(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      // Calculate the total width of all items
+      const scrollWidth = scrollContainerRef.current.scrollWidth;
+      // Get the width of the container itself
+      const clientWidth = scrollContainerRef.current.clientWidth;
+      // The difference is the maximum draggable distance
+      setContainerWidth(scrollWidth - clientWidth);
+    }
+  }, [showcaseItems]);
+
+  return (
+    <section id="showcase" className="py-20 bg-[#FBF9F6] relative overflow-hidden">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -42,26 +56,33 @@ return (
           </p>
         </motion.div>
 
-        {/* --- 1. MOBILE-ONLY HORIZONTAL SCROLLER --- */}
-        <div className="flex overflow-x-auto md:hidden space-x-4 pb-4 no-scrollbar">
-          {showcaseItems.map((item) => (
-            <div
-              key={item.title}
-              className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square min-w-60"
-            >
-              <img
-                alt={item.imgAlt}
-                className="w-full h-full object-cover"
-                src={item.imgSrc}
-              />
+        {/* --- 1. MOBILE-ONLY DRAGGABLE SCROLLER --- */}
+        <motion.div ref={scrollContainerRef} className="md:hidden cursor-grab active:cursor-grabbing">
+          <motion.div
+            className="flex space-x-4 pb-4"
+            drag="x"
+            dragConstraints={{
+              right: 0,
+              left: -containerWidth,
+            }}
+          >
+            {showcaseItems.map((item) => (
               <div
-                className="absolute inset-0 flex items-end p-6"
+                key={item.title}
+                className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square min-w-60"
               >
-                <p className="font-semibold text-lg text-[#2F2F2F]">{item.title}</p>
+                <img
+                  alt={item.imgAlt}
+                  className="w-full h-full object-cover pointer-events-none"
+                  src={item.imgSrc}
+                />
+                <div className="absolute inset-0 flex items-end p-6">
+                  <p className="font-semibold text-lg text-[#2F2F2F]">{item.title}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </motion.div>
+        </motion.div>
 
         {/* --- 2. DESKTOP-ONLY ANIMATED GRID --- */}
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
