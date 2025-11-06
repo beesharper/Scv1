@@ -8,7 +8,7 @@ const HowItWorks = () => {
       icon: Lightbulb,
       title: 'Share Your Idea',
       description: 'Tell us about your vision and what you want to create',
-      color: '#FDE68A'
+      color: '#E5B26F'
     },
     {
       icon: Palette,
@@ -31,9 +31,9 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-gradient-to-br from-[#FDE68A]/20 via-[#A997AB]/20 to-[#86968C]/20 relative overflow-hidden">
+    <section id="how-it-works" className="py-20 bg-gradient-to-br from-butter-yellow/20 via-[#A997AB]/20 to-[#86968C]/20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-10 left-10 w-40 h-40 bg-[#FDE68A] rounded-full blur-3xl"></div>
+          <div className="absolute top-10 left-10 w-40 h-40 bg-butter-yellow rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-60 h-60 bg-[#A997AB] rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-[#86968C] rounded-full blur-3xl"></div>
         </div>
