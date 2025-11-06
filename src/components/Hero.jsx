@@ -18,7 +18,7 @@ const Hero = () => {
           {/* Blur for "Local." */}
           <div className="absolute w-60 h-60 bg-[#A997AB] rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-2000"></div>
           {/* Blur for "Craftmanship." */}
-          <div className="absolute w-60 h-60 bg-[#86968C] rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-4000 translate-x-full lg:translate-x-[24rem]"></div>
+          <div className="absolute w-60 h-60 bg-butter-yellow rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob animation-delay-4000 translate-x-full lg:translate-x-[24rem]"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.h1 initial={{
