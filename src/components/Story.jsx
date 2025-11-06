@@ -22,7 +22,7 @@ const Story = () => {
                   <img alt="Phebe-Jane Sharp smiling on a beach with ocean in background" className="w-full h-full object-cover aspect-square" src="/assets/screenshot-2025-10-25-124258-XkDxn.png" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#D36B5F] rounded-full blur-2xl opacity-30"></div>
-                <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#FDE68A] rounded-full blur-2xl opacity-30"></div>
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-butter-yellow rounded-full blur-2xl opacity-30"></div>
               </motion.div>
 
               <motion.div initial={{

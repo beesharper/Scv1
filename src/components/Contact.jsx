@@ -160,7 +160,7 @@ const Contact = () => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#FDE68A] flex items-center justify-center text-[#2F2F2F] font-bold shadow-md">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-butter-yellow flex items-center justify-center text-[#2F2F2F] font-bold shadow-md">
                     2
                   </div>
                   <div>
@@ -190,7 +190,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-gradient-to-br from-[#D36B5F]/10 to-[#FDE68A]/10 rounded-2xl">
+              <div className="mt-8 p-6 bg-gradient-to-br from-[#D36B5F]/10 to-butter-yellow/10 rounded-2xl">
                 <div className="flex items-center space-x-3 mb-3">
                   <CheckCircle className="text-[#86968C]" size={24} />
                   <h4 className="font-semibold text-[#2F2F2F]">Why Work With Phebe?</h4>

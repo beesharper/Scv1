@@ -11,7 +11,7 @@ const Hero = () => {
       });
     }
   };
-  return <section className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-[#FBF9F6] via-[#FDE68A]/10 to-[#A997AB]/10">
+  return <section className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-[#FBF9F6] via-butter-yellow/10 to-[#A997AB]/10">
         <div className="absolute inset-0 z-0 flex items-center justify-center">
           {/* Blur for "Personalized." */}
           <div className="absolute w-60 h-60 bg-[#D36B5F] rounded-full mix-blend-multiply filter blur-2xl opacity-30 animate-blob -translate-x-full lg:-translate-x-[24rem]"></div>
@@ -33,7 +33,7 @@ const Hero = () => {
         }} className="text-5xl md:text-6xl lg:text-7xl pacifico text-[#2F2F2F] mb-6 leading-tight">
             <span className="text-[#D36B5F]">Personalized.</span>{' '}
             <span className="text-[#A997AB]">Local.</span>{' '}
-            <span className="text-[#86968C]">Craftmanship.</span>
+            <span className="text-butter-yellow">Craftmanship.</span>
           </motion.h1>
           <motion.p initial={{
           opacity: 0,
