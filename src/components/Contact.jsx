@@ -198,7 +198,7 @@ const Contact = () => {
                 <ul className="space-y-2 text-[#2F2F2F]/80">
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>Responsive, fun & passionate</span>
+                    <span>Responsive, fun, passionate</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
@@ -206,7 +206,7 @@ const Contact = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>A devotion to every detail</span>
+                    <span>Devoted to every detail</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
