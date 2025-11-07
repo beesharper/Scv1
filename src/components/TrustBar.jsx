@@ -9,11 +9,11 @@ const testimonials = [{
 }, {
   quote: "The Ottawa One World Grannies are delighted with the mugs we recently ordered, designed by Phebe. The quality is excellent, showing a colourful Solidarity’ quilt made by Canadian grandmothers as well as our name and logo.",
   author: "One World Grannies",
-  color: "text-mauve"
+  color: "text-dusty-mauve"
 }, {
   quote: "Fast, creative, and so easy to work with. Sharp & Crafty brought our team's vision to life perfectly.",
   author: "Coach Davies, Gatineau Gryphons",
-  color: "text-ivy-green"
+  color: "text-silver-sage"
 }];
 const TrustBar = () => {
   return <section className="py-20 bg-gradient-to-br from-butter-yellow/20 via-[#A997AB]/20 to-[#86968C]/20 relative overflow-hidden">
