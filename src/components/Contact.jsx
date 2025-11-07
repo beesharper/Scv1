@@ -198,11 +198,11 @@ const Contact = () => {
                 <ul className="space-y-2 text-[#2F2F2F]/80">
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>Responsive and fun to work with</span>
+                    <span>Responsive, fun & passionate</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>100% handcrafted in Gatineau, QC</span>
+                    <span>100% handcrafted</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
@@ -210,7 +210,7 @@ const Contact = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>Supporting local business </span>
+                    <span>Support a local business</span>
                   </li>
                 </ul>
               </div>
