@@ -44,7 +44,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.6,
           delay: 0.4
-        }} className="text-lg md:text-xl text-[#2F2F2F] mb-2 leading-relaxed">Transform your idea into beautiful, handcrafted goods. Made locally in Ottawa / Gatineau.</motion.p>
+        }} className="text-lg md:text-xl text-[#2F2F2F] mb-2 leading-relaxed">Transform your ideas into beautiful, handcrafted goods. Made locally in Ottawa / Gatineau.</motion.p>
           <motion.p initial={{
           opacity: 0,
           y: 20
