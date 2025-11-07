@@ -202,11 +202,11 @@ const Contact = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>100% handcrafted</span>
+                    <span>Devoted to every detail</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
-                    <span>Devoted to every detail</span>
+                    <span>100% handcrafted</span>
                   </li>
                   <li className="flex items-start">
                     <span className="mr-2">•</span>
