@@ -44,7 +44,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.6,
           delay: 0.4
-        }} className="text-lg md:text-xl text-[#2F2F2F] mb-2 leading-relaxed">Transform your idea into beautiful, handcrafted keepers. Made with care locally in Ottawa / Gatineau.</motion.p>
+        }} className="text-lg md:text-xl text-[#2F2F2F] mb-2 leading-relaxed">Transform your idea into beautiful, handcrafted goods. Made locally in Ottawa / Gatineau.</motion.p>
           <motion.p initial={{
           opacity: 0,
           y: 20
@@ -68,7 +68,7 @@ const Hero = () => {
             <Button onClick={handleCtaClick} className="px-8 py-3 text-lg rounded-full shadow-lg transition-all duration-300 transform hover:scale-105
                          bg-[#D36B5F] text-white font-semibold
                          hover:bg-[#D36B5F]/90">
-              Start Your Custom Order!
+              Place your order now!
             </Button>
           </motion.div>
         </div>
