@@ -5,15 +5,15 @@ import { Quote } from 'lucide-react';
 const testimonials = [{
   quote: "The most stunning and customized items can be found at Sharp and Crafty Studio. The founder, Phebe and her cousin Maddie have collaborated to create the perfect gift for those seeking a unique present either for themselves or a loved one. I highly recommend their services to anyone wanting a \"WOW\" item at reasonable prices.",
   author: "Victoria Palado-Lapointe",
-  color: "text-[#86968C]"
+  color: "text-butter-yellow"
 }, {
   quote: "The Ottawa One World Grannies are delighted with the mugs we recently ordered, designed by Phebe. The quality is excellent, showing a colourful Solidarity’ quilt made by Canadian grandmothers as well as our name and logo.",
   author: "One World Grannies",
-  color: "text-[#A997AB]"
+  color: "text-dusty-mauve"
 }, {
   quote: "Fast, creative, and so easy to work with. Sharp & Crafty brought our team's vision to life perfectly.",
   author: "Coach Davies, Gatineau Gryphons",
-  color: "text-butter-yellow"
+  color: "text-silver-sage"
 }];
 const TrustBar = () => {
   return <section className="py-20 bg-gradient-to-br from-butter-yellow/20 via-[#A997AB]/20 to-[#86968C]/20 relative overflow-hidden">
