@@ -67,7 +67,7 @@ const Showcase = () => {
             }}
           >
             {showcaseItems.map((item) => (
-              <div
+              <figure
                 key={item.title}
                 className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square min-w-60"
               >
@@ -76,7 +76,8 @@ const Showcase = () => {
                   className="w-full h-full object-cover pointer-events-none"
                   src={item.imgSrc}
                 />
-              </div>
+                <figcaption className="sr-only">{item.title}</figcaption>
+              </figure>
             ))}
           </motion.div>
         </motion.div>
@@ -92,11 +93,14 @@ const Showcase = () => {
               transition={{ duration: 0.6, delay: item.delay }}
               className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square"
             >
-              <img
-                alt={item.imgAlt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                src={item.imgSrc}
-              />
+              <figure>
+                <img
+                  alt={item.imgAlt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  src={item.imgSrc}
+                />
+                <figcaption className="sr-only">{item.title}</figcaption>
+              </figure>
               <div className="absolute inset-0 bg-gradient-to-t from-[#2F2F2F]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <p className="text-white font-semibold text-lg">{item.title}</p>
               </div>
