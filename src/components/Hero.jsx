@@ -32,7 +32,7 @@ const Hero = () => {
           delay: 0.2
         }} className="text-5xl md:text-6xl lg:text-7xl pacifico text-[#2F2F2F] mb-6 leading-tight">
             <span className="text-[#D36B5F]">Personalized.</span>{' '}
-            <span className="text-[#A997AB]">Local.</span>{' '}
+            <span className="text-[#A997AB]">Localized.</span>{' '}
             <span className="text-butter-yellow">Craftmanship.</span>
           </motion.h1>
           <motion.p initial={{
