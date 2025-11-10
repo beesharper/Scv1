@@ -71,10 +71,10 @@ const Header = () => {
           <NavLink to="how-it-works" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
             How It Works
           </NavLink>
-          <NavLink to="page-bottom" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
+          <NavLink to="contact" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
             Contact
           </NavLink>
-          <NavLink to="page-bottom">
+          <NavLink to="contact">
             <Button className="bg-[#D36B5F] hover:bg-[#D36B5F]/90 text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all">Get Crafty</Button>
           </NavLink>
         </div>
@@ -104,10 +104,10 @@ const Header = () => {
               <NavLink to="how-it-works" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 How It Works
               </NavLink>
-              <NavLink to="page-bottom" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
+              <NavLink to="contact" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 Contact
               </NavLink>
-              <NavLink to="page-bottom" onClick={closeMenu} isMobile={true}>
+              <NavLink to="contact" onClick={closeMenu} isMobile={true}>
                 <Button className="bg-[#D36B5F] hover:bg-[#D36B5F]/90 text-white px-6 py-3 rounded-full font-semibold shadow-lg w-full">
                   Get Crafty
                 </Button>
