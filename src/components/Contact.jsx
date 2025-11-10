@@ -122,11 +122,6 @@ const Contact = () => {
                   <Textarea id="projectIdea" name="projectIdea" value={formData.projectIdea} onChange={handleChange} placeholder="Tell us about your vision..." rows={6} className="w-full border-2 border-[#D36B5F]/20 focus:border-[#D36B5F] rounded-xl px-4 py-3 text-[#2F2F2F] resize-none" />
                 </div>
 
-                <div className="flex items-center space-x-2 text-sm text-[#2F2F2F]/70">
-                  <Shield size={16} className="text-[#86968C]" />
-                  <span>Your information is secure.</span>
-                </div>
-
                 <Button type="submit" disabled={isSubmitting} className="w-full bg-[#D36B5F] hover:bg-[#D36B5F]/90 text-white px-8 py-6 text-lg rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 disabled:opacity-75 disabled:scale-100 disabled:cursor-not-allowed">
                   {isSubmitting ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Sending...</> : 'Submit Your Request'}
                 </Button>
