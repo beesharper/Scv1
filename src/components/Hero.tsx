@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
@@ -11,6 +11,24 @@ const Hero = () => {
       });
     }
   };
+
+  const [titleNumber, setTitleNumber] = useState(0);
+  const titles = useMemo(
+    () => ["t-shirts", "hoodies", "personalized", "drinkware", "key chains", "event decor"],
+    []
+  );
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (titleNumber === titles.length - 1) {
+        setTitleNumber(0);
+      } else {
+        setTitleNumber(titleNumber + 1);
+      }
+    }, 2000);
+    return () => clearTimeout(timeoutId);
+  }, [titleNumber, titles]);
+
   return <section className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-[#FBF9F6] via-butter-yellow/10 to-[#A997AB]/10">
         <div className="absolute inset-0 z-0 flex items-center justify-center">
           {/* Blur for "Personalized." */}
@@ -45,16 +63,33 @@ const Hero = () => {
           duration: 0.6,
           delay: 0.4
         }} className="text-lg md:text-xl text-[#2F2F2F] mb-2 leading-relaxed">Transform your ideas into beautiful, handcrafted goods. Made locally in Ottawa / Gatineau.</motion.p>
-          <motion.p initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 0.6,
-          delay: 0.5
-        }} className="text-xl md:text-2xl text-[#2F2F2F] font-bold mb-8 leading-relaxed">Stay Sharp. Be Crafty.</motion.p>
+
+          <div className="h-12 md:h-16 mb-8 flex justify-center items-center relative overflow-hidden">
+              <span className="relative flex w-full justify-center overflow-hidden text-center">
+                {titles.map((title, index) => (
+                  <motion.span
+                    key={index}
+                    className="absolute text-xl md:text-2xl text-[#2F2F2F] font-bold whitespace-nowrap"
+                    initial={{ opacity: 0, y: "-100" }}
+                    transition={{ type: "spring", stiffness: 50 }}
+                    animate={
+                      titleNumber === index
+                        ? {
+                            y: 0,
+                            opacity: 1,
+                          }
+                        : {
+                            y: titleNumber > index ? -150 : 150,
+                            opacity: 0,
+                          }
+                    }
+                  >
+                    {title}
+                  </motion.span>
+                ))}
+              </span>
+          </div>
+
           <motion.div initial={{
           opacity: 0,
           y: 20
