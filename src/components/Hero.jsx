@@ -39,9 +39,6 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, [coloredProducts.length]);
 
-  // Duplicate the list for the infinite scroll effect
-  const displayProducts = [...coloredProducts, ...coloredProducts];
-
   return (
     <section className="relative h-screen flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-[#FBF9F6] via-butter-yellow/10 to-[#A997AB]/10">
       <div className="absolute inset-0 z-0 flex items-center justify-center">
@@ -74,37 +71,8 @@ const Hero = () => {
           Transform your ideas into beautiful, handcrafted goods. Made locally in Ottawa / Gatineau.
         </motion.p>
 
-        {/* Mobile Scrolling Marquee */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="w-full overflow-hidden mb-8 md:hidden"
-        >
-          <div className="flex w-fit mx-auto">
-            <motion.div
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                duration: 20,
-                ease: "linear",
-                repeat: Infinity
-              }}
-              className="flex gap-4 pr-4"
-            >
-              {displayProducts.map((item, index) => (
-                <div
-                  key={index}
-                  className={`px-6 py-2 rounded-full whitespace-nowrap shadow-sm ${item.colorClass}`}
-                >
-                  {item.text}
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </motion.div>
-
-        {/* Desktop Fade Effect */}
-        <div className="hidden md:flex justify-center items-center h-16 mb-8 w-full">
+        {/* Unified Fade Effect */}
+        <div className="flex justify-center items-center h-16 mb-8 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -112,7 +80,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.5 }}
-              className={`px-8 py-3 rounded-full text-2xl font-medium shadow-md ${coloredProducts[currentIndex].colorClass}`}
+              className={`px-8 py-3 rounded-full text-xl md:text-2xl font-medium shadow-md ${coloredProducts[currentIndex].colorClass}`}
             >
               {coloredProducts[currentIndex].text}
             </motion.div>
