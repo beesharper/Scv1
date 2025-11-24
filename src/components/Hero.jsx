@@ -1,8 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const handleCtaClick = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
@@ -29,6 +31,13 @@ const Hero = () => {
     text: item,
     colorClass: colors[index % colors.length]
   }));
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % coloredProducts.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [coloredProducts.length]);
 
   // Duplicate the list for the infinite scroll effect
   const displayProducts = [...coloredProducts, ...coloredProducts];
@@ -65,11 +74,12 @@ const Hero = () => {
           Transform your ideas into beautiful, handcrafted goods. Made locally in Ottawa / Gatineau.
         </motion.p>
 
+        {/* Mobile Scrolling Marquee */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="w-full overflow-hidden mb-8"
+          className="w-full overflow-hidden mb-8 md:hidden"
         >
           <div className="flex w-fit mx-auto">
             <motion.div
@@ -92,6 +102,22 @@ const Hero = () => {
             </motion.div>
           </div>
         </motion.div>
+
+        {/* Desktop Fade Effect */}
+        <div className="hidden md:flex justify-center items-center h-16 mb-8 w-full">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className={`px-8 py-3 rounded-full text-2xl font-medium shadow-md ${coloredProducts[currentIndex].colorClass}`}
+            >
+              {coloredProducts[currentIndex].text}
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
