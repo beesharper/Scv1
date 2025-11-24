@@ -21,7 +21,6 @@ const Hero = () => {
     'bg-dusty-coral text-white border-none',
     'bg-dusty-mauve text-white border-none',
     'bg-butter-yellow text-charcoal-black border-none',
-    'bg-silver-sage text-white border-none',
     'bg-rose-quartz text-charcoal-black border-none'
   ];
 
