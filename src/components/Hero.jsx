@@ -13,7 +13,7 @@ const Hero = () => {
   };
 
   const products = [
-    'Keychains', 'Luggage Tags', 'Drinkware', 'Custom Gifts',
+    'Keychains', 'Luggage Tags', 'Drinkware', 'Personalized Gifts',
     'T-Shirts', 'Hoodies', 'Wedding Favors', 'Event Decor'
   ];
 

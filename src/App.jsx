@@ -15,9 +15,9 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Sharp & Crafty - Custom Gifts & Decor in Ottawa Gatineau</title>
+        <title>Sharp & Crafty - Personalized Gifts & Decor in Ottawa Gatineau</title>
         <meta name="description" content="Transform your ideas into beautiful, personalized gifts and decor. Phebe-Jane Sharp lovingly creates custom apparel, party favors, event decor and more in Ottawa Gatineau. Craft your vision today!" />
-        <meta property="og:title" content="Custom Gifts & Decor in Ottawa Gatineau" />
+        <meta property="og:title" content="Personalized Gifts & Decor in Ottawa Gatineau" />
         <meta property="og:description" content="Transform your ideas into beautiful, personalized gifts and decor. Phebe-Jane Sharp lovingly creates custom apparel, party favors, event decor and more in Ottawa Gatineau" />
         <meta property="og:image" content="https://sharpcrafty.com/assets/screenshot-2025-10-25-124258-XkDxn.png" />
         <meta property="og:url" content="https://sharpcrafty.com/" />
