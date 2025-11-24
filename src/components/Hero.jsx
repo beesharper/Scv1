@@ -45,7 +45,7 @@ const Hero = () => {
           duration: 0.6,
           delay: 0.4
         }} className="text-lg md:text-xl text-[#2F2F2F] mb-2 leading-relaxed">Transform your ideas into beautiful, handcrafted goods. Made locally in Ottawa / Gatineau.</motion.p>
-          <motion.p initial={{
+          <motion.div initial={{
           opacity: 0,
           y: 20
         }} animate={{
@@ -54,7 +54,21 @@ const Hero = () => {
         }} transition={{
           duration: 0.6,
           delay: 0.5
-        }} className="text-xl md:text-2xl text-[#2F2F2F] font-bold mb-8 leading-relaxed">Stay Sharp. Be Crafty.</motion.p>
+        }} className="w-full overflow-hidden mb-8">
+            <div className="flex w-[200%]">
+              <motion.div animate={{
+              x: ["0%", "-50%"]
+            }} transition={{
+              duration: 20,
+              ease: "linear",
+              repeat: Infinity
+            }} className="flex space-x-4 pr-4">
+                {['Accessories', 'Home & Living', 'Drinkware', 'Custom Gifts', 'T-Shirts', 'Hoodies', 'Wedding Favors', 'Event Decor', 'Accessories', 'Home & Living', 'Drinkware', 'Custom Gifts', 'T-Shirts', 'Hoodies', 'Wedding Favors', 'Event Decor'].map((item, index) => <div key={index} className="px-6 py-2 rounded-full border border-gray-300 bg-white text-gray-800 whitespace-nowrap shadow-sm">
+                    {item}
+                  </div>)}
+              </motion.div>
+            </div>
+          </motion.div>
           <motion.div initial={{
           opacity: 0,
           y: 20
