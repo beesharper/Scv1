@@ -15,15 +15,15 @@ const Hero = () => {
   };
 
   const products = [
-    'Personalized Gifts', 'Keychains', 'Luggage Tags', 'Drinkware',
-    'T-Shirts', 'Hoodies', 'Wedding Favors', 'Event Decor'
+    'Personalized Gifts', 'T-Shirts', 'Hoodies', 'Wedding Favors',
+    'Drinkware', 'Event Decor', 'Keychains', 'Luggage Tags'
   ];
 
   const colors = [
-    'bg-dusty-coral text-white border-none',
     'bg-dusty-mauve text-white border-none',
     'bg-butter-yellow text-charcoal-black border-none',
-    'bg-rose-quartz text-charcoal-black border-none'
+    'bg-rose-quartz text-charcoal-black border-none',
+    'bg-dusty-coral text-white border-none'
   ];
 
   // Assign colors to the original set first to ensure consistency
