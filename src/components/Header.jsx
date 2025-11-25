@@ -71,7 +71,7 @@ const Header = () => {
           <NavLink to="how-it-works" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
             How It Works
           </NavLink>
-          <NavLink to="contact" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
+          <NavLink to="page-bottom" className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium">
             Contact
           </NavLink>
           <NavLink to="contact">
@@ -104,7 +104,7 @@ const Header = () => {
               <NavLink to="how-it-works" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 How It Works
               </NavLink>
-              <NavLink to="contact" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
+              <NavLink to="page-bottom" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 Contact
               </NavLink>
               <NavLink to="contact" onClick={closeMenu} isMobile={true}>
