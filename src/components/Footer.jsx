@@ -39,7 +39,7 @@ const Footer = () => {
             <p className="font-medium text-xl">
               (343) 961-5899
             </p>
-            <p className="text-sm text-[#2F2F2F]/70">Gatineau, QC • 100% Handcrafted Locally</p>
+            <p className="text-sm text-[#2F2F2F]/70">Ottawa / Gatineau • 100% Handcrafted Locally</p>
           </div>
 
           <div className="mt-8 pt-8 border-t border-[#D36B5F]/20">
