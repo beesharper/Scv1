@@ -118,9 +118,9 @@ const Contact = () => {
 
                 <div>
                   <Label htmlFor="phoneNumber" className="text-[#2F2F2F] font-semibold mb-2 block">
-                    Optional Callback
+                    Phone Number (Optional)
                   </Label>
-                  <Input id="phoneNumber" name="phoneNumber" type="tel" value={formData.phoneNumber} onChange={handleChange} className="w-full border-2 border-[#D36B5F]/20 focus:border-[#D36B5F] rounded-xl px-4 py-3 text-[#2F2F2F]" />
+                  <Input id="phoneNumber" name="phoneNumber" type="tel" value={formData.phoneNumber} onChange={handleChange} placeholder="+1 (555) 000-0000" className="w-full border-2 border-[#D36B5F]/20 focus:border-[#D36B5F] rounded-xl px-4 py-3 text-[#2F2F2F]" />
                 </div>
 
                 <div>
