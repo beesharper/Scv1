@@ -35,7 +35,7 @@ const TrustBar = () => {
           duration: 0.8
         }} className="text-center mb-16">
             <h2 className="text-3xl font-bold text-[#2F2F2F] mb-4">
-              Thoughts From Our <span className="pacifico text-[#D36B5F]">Neighbors</span>
+              From Our <span className="pacifico text-[#D36B5F]">Neighbors</span>
             </h2>
             <p className="text-lg text-[#2F2F2F]/80 max-w-2xl mx-auto">We love our community! Here's what people are saying about our handcrafted creations.</p>
           </motion.div>
