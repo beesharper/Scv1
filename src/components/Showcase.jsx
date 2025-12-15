@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 
 const showcaseItems = [
 {
+imgSrc: "/assets/christmas-mugs.jpg",
+imgAlt: "Christmas mugs with Pokemon designs",
+title: "Christmas Mugs",
+delay: 0.0
+},
+{
 imgSrc: "/assets/screenshot-2025-10-25-113400-hT8Qu.png",
 imgAlt: "Custom handcrafted team apparel",
 title: "Wedding Favors",
