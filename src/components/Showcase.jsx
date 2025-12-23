@@ -3,28 +3,34 @@ import { motion } from 'framer-motion';
 
 const showcaseItems = [
 {
+imgSrc: "/assets/etched-glass.jpg",
+imgAlt: "Custom etched glass design",
+title: "Etched Glass",
+delay: 0.0
+},
+{
 imgSrc: "/assets/christmas-mugs.jpg",
 imgAlt: "Christmas mugs with Pokemon designs",
 title: "Christmas Mugs",
-delay: 0.0
+delay: 0.1
 },
 {
 imgSrc: "/assets/screenshot-2025-10-25-113400-hT8Qu.png",
 imgAlt: "Custom handcrafted team apparel",
 title: "Wedding Favors",
-delay: 0.1
+delay: 0.2
 },
 {
 imgSrc: "/assets/screenshot-2025-10-25-112235-fizCZ.png",
 imgAlt: "Elegant wedding favors handmade",
 title: "Custom Apparel",
-delay: 0.2
+delay: 0.3
 },
 {
 imgSrc: "/assets/screenshot-2025-10-25-112835-kj8wT.png",
 imgAlt: "Custom event decor handcrafted",
 title: "Event Decor",
-delay: 0.3
+delay: 0.4
 },
 ];
 
