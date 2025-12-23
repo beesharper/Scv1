@@ -3,10 +3,16 @@ import { motion } from 'framer-motion';
 
 const showcaseItems = [
 {
+imgSrc: "/assets/dtf-sweater.jpg",
+imgAlt: "Sweater with colorful DTF design",
+title: "DTF Sweater",
+delay: 0.0
+},
+{
 imgSrc: "/assets/christmas-mugs.jpg",
 imgAlt: "Christmas mugs with Pokemon designs",
 title: "Christmas Mugs",
-delay: 0.0
+delay: 0.1
 },
 {
 imgSrc: "/assets/screenshot-2025-10-25-113400-hT8Qu.png",
