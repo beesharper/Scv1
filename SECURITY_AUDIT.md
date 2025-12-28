@@ -58,22 +58,24 @@ The application follows general React best practices (no dangerous DOM manipulat
 ## 4. Configuration Review
 
 ### 4.1 Content Security Policy (CSP)
-*   **Status:** **Fail**
+*   **Status:** **Missing (Low Risk)**
 *   **Findings:**
     *   The `index.html` file does not define a Content Security Policy (CSP).
-*   **Impact:** The application is more vulnerable to XSS and data injection attacks because the browser has no instructions on which scripts or resources are allowed to load.
-*   **Recommendation:** Add a `<meta http-equiv="Content-Security-Policy" ...>` tag to `index.html`. A strict CSP would look like:
+*   **Context:**
+    *   **`unsafe-inline` is required:** The application uses `framer-motion` extensively for animations and includes dynamic inline styles (e.g., in `HowItWorks.jsx`). These libraries rely on inline styles to function.
+    *   **Dev Mode:** Vite's development server requires inline scripts for Hot Module Replacement (HMR).
+*   **Recommendation:** Add a CSP that **explicitly allows** `unsafe-inline`. For a small business website with no backend authentication handling, this strikes the right balance between functionality and security.
     ```html
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://formspree.io; connect-src 'self' https://formspree.io;">
     ```
-    *(Note: 'unsafe-inline' is often needed for styled-components or fast development, but should be removed if possible in strict environments.)*
 
 ### 4.2 Vite Configuration (`vite.config.js`)
-*   **Status:** **Warning**
+*   **Status:** **Info / Accepted Risk**
 *   **Findings:**
     *   `server: { allowedHosts: true }`: This disables host header checking.
-    *   **Impact:** This exposes the dev server to DNS rebinding attacks if running on a local network.
-    *   **Recommendation:** Remove `allowedHosts: true` or specify the exact hosts allowed (e.g., `localhost`, `your-domain.com`).
+    *   **Context:** This setting is required for the cloud-based testing environment (Jules VM) to allow access to the development server from external URLs.
+    *   **Impact:** While typically a risk (DNS rebinding) on open local networks, it is a known and accepted configuration for this specific environment.
+    *   **Recommendation:** If the project is ever moved to a standard local development setup or deployed to production, this setting should be removed or tightened.
 
 ## 5. Summary of Recommendations
 
