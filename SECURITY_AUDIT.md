@@ -14,19 +14,12 @@ The application follows general React best practices (no dangerous DOM manipulat
 
 ## 2. Dependency Analysis
 
-### 2.1 Known Vulnerabilities (`npm audit`)
-*   **Severity:** **Moderate**
-*   **Packages:** `esbuild` (via `vite`)
-*   **Issue:** `esbuild` <= 0.24.2 allows requests to the development server to read the response (GHSA-67mh-4wv8-2f99).
-*   **Impact:** If the development server is exposed to a network, an attacker could potentially access source code or other assets.
-*   **Remediation:** Update `vite` to the latest version. Note that updating to Vite 6+ might require migration steps.
-
-### 2.2 Deprecated/Unmaintained Packages
+### 2.1 Deprecated/Unmaintained Packages
 *   **Package:** `react-helmet` (^6.1.0)
 *   **Issue:** This package is deprecated and no longer maintained. It uses `UNSAFE_componentWillMount` which is unsafe in React 18+ strict mode and may cause issues in future React versions.
 *   **Remediation:** Migrate to `react-helmet-async`.
 
-### 2.3 Outdated Major Versions
+### 2.2 Outdated Major Versions
 *   **Vite:** Currently `^4.4.5`. The latest stable is v6. Updating is recommended for performance and security fixes.
 *   **Framer Motion:** Currently `^10.16.4`. v11 is available.
 
@@ -79,11 +72,10 @@ The application follows general React best practices (no dangerous DOM manipulat
 
 ## 5. Summary of Recommendations
 
-1.  **High Priority:** Run `npm update` and specifically upgrade `vite` to address the `esbuild` vulnerability.
-2.  **High Priority:** Add a **Content Security Policy (CSP)** to `index.html`.
-3.  **Medium Priority:** Replace `react-helmet` with `react-helmet-async`.
-4.  **Medium Priority:** Remove `allowedHosts: true` from `vite.config.js` unless explicitly required for your dev setup (e.g., tunneling).
-5.  **Low Priority:** Enable CAPTCHA on your Formspree account if spam submissions increase.
+1.  **High Priority:** Add a **Content Security Policy (CSP)** to `index.html`.
+2.  **Medium Priority:** Replace `react-helmet` with `react-helmet-async`.
+3.  **Medium Priority:** Remove `allowedHosts: true` from `vite.config.js` unless explicitly required for your dev setup (e.g., tunneling).
+4.  **Low Priority:** Enable CAPTCHA on your Formspree account if spam submissions increase.
 
 ---
 *End of Report*
