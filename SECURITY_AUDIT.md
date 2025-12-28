@@ -19,9 +19,13 @@ The application follows general React best practices (no dangerous DOM manipulat
 *   **Issue:** This package is deprecated and no longer maintained. It uses `UNSAFE_componentWillMount` which is unsafe in React 18+ strict mode and may cause issues in future React versions.
 *   **Remediation:** Migrate to `react-helmet-async`.
 
-### 2.2 Outdated Major Versions
-*   **Vite:** Currently `^4.4.5`. The latest stable is v6. Updating is recommended for performance and security fixes.
+### 2.2 Outdated Major Versions (Accepted Risks)
+*   **Vite:** Currently `^4.4.5`. The latest stable is v6.
+    *   **Status:** **Accepted Risk**
+    *   **Context:** The known `esbuild` vulnerability in this version is limited to the development server environment and poses no threat to the production build. The complexity/risk of a major version upgrade is not justified for this static site.
 *   **Framer Motion:** Currently `^10.16.4`. v11 is available.
+    *   **Status:** **Accepted Risk**
+    *   **Context:** Version 10 is secure and stable. Upgrading to v11 offers minor performance benefits but carries a risk of visual regressions for complex animations. To maintain usability stability, remaining on v10 is the preferred choice.
 
 ## 3. Codebase Security Findings
 
