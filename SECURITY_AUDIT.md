@@ -16,8 +16,9 @@ The application follows general React best practices (no dangerous DOM manipulat
 
 ### 2.1 Deprecated/Unmaintained Packages
 *   **Package:** `react-helmet` (^6.1.0)
-*   **Issue:** This package is deprecated and no longer maintained. It uses `UNSAFE_componentWillMount` which is unsafe in React 18+ strict mode and may cause issues in future React versions.
-*   **Remediation:** Migrate to `react-helmet-async`.
+*   **Status:** **Resolved**
+*   **Action Taken:** Migrated to `react-helmet-async` on 2025-02-12.
+*   **Context:** `react-helmet` was replaced to ensure compatibility with React 18+ strict mode and prevent future breaking changes.
 
 ### 2.2 Outdated Major Versions (Accepted Risks)
 *   **Vite:** Currently `^4.4.5`. The latest stable is v6.
@@ -78,7 +79,7 @@ The application follows general React best practices (no dangerous DOM manipulat
 ## 5. Summary of Recommendations
 
 1.  **High Priority:** Add a **Content Security Policy (CSP)** to `index.html`.
-2.  **Medium Priority:** Replace `react-helmet` with `react-helmet-async`.
+2.  **Completed:** Replace `react-helmet` with `react-helmet-async` (Done).
 3.  **Medium Priority:** Remove `allowedHosts: true` from `vite.config.js` unless explicitly required for your dev setup (e.g., tunneling).
 4.  **Low Priority:** Enable CAPTCHA on your Formspree account if spam submissions increase.
 
