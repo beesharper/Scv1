@@ -8,9 +8,9 @@
 
 This security audit focused on the client-side security, dependency health, and configuration of the `sharp-and-crafty` React application.
 
-**Overall Security Posture:** **Moderate**
+**Overall Security Posture:** **Good**
 
-The application follows general React best practices (no dangerous DOM manipulation, correct link security). However, there are significant findings related to **dependency vulnerabilities** and **missing security headers (CSP)**. The development server configuration is also overly permissive, which is a risk if the dev mode is exposed.
+The application follows general React best practices (no dangerous DOM manipulation, correct link security). The previously missing **Content Security Policy (CSP)** has been implemented, significantly improving the security posture against XSS and data exfiltration. Dependency vulnerabilities remain as accepted risks due to the static nature of the site and stability requirements.
 
 ## 2. Dependency Analysis
 
@@ -56,17 +56,14 @@ The application follows general React best practices (no dangerous DOM manipulat
 ## 4. Configuration Review
 
 ### 4.1 Content Security Policy (CSP)
-*   **Status:** **Missing (Low Risk)**
+*   **Status:** **Resolved**
 *   **Findings:**
-    *   The `index.html` file does not define a Content Security Policy (CSP).
-*   **Context:**
-    *   **`unsafe-inline` is required:** The application uses `framer-motion` extensively for animations and includes dynamic inline styles (e.g., in `HowItWorks.jsx`). These libraries rely on inline styles to function.
-    *   **Dev Mode:** Vite's development server requires inline scripts for Hot Module Replacement (HMR).
-*   **Recommendation:** Add a CSP that **explicitly allows** `unsafe-inline`. For a small business website with no backend authentication handling, this strikes the right balance between functionality and security.
-    *   **Why is this still needed?** Even with `unsafe-inline`, a CSP prevents attackers from loading malicious scripts from **external/unauthorized domains** (e.g., `evil.com/hack.js`) and restricts where your forms can send data (preventing data exfiltration).
-    ```html
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://formspree.io; connect-src 'self' https://formspree.io;">
-    ```
+    *   A robust CSP has been added to `index.html`.
+*   **Implementation Details:**
+    *   **`unsafe-inline` Allowed:** Explicitly permitted for scripts and styles to support `framer-motion` animations and Vite's HMR.
+    *   **External Connections:** Restricted to `https://formspree.io` (for forms) and `ws:`/`wss:` (for Vite HMR).
+    *   **Assets:** Fonts allowed from Google Fonts; Images allowed from self and `data:`.
+    *   **Object Sources:** Strictly set to `'none'`.
 
 ### 4.2 Vite Configuration (`vite.config.js`)
 *   **Status:** **Info / Accepted Risk**
@@ -78,7 +75,7 @@ The application follows general React best practices (no dangerous DOM manipulat
 
 ## 5. Summary of Recommendations
 
-1.  **High Priority:** Add a **Content Security Policy (CSP)** to `index.html`.
+1.  **Completed:** Add a **Content Security Policy (CSP)** to `index.html` (Done).
 2.  **Completed:** Replace `react-helmet` with `react-helmet-async` (Done).
 3.  **Medium Priority:** Remove `allowedHosts: true` from `vite.config.js` unless explicitly required for your dev setup (e.g., tunneling).
 4.  **Low Priority:** Enable CAPTCHA on your Formspree account if spam submissions increase.
