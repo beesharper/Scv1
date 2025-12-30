@@ -62,6 +62,7 @@ The application follows general React best practices (no dangerous DOM manipulat
     *   **`unsafe-inline` is required:** The application uses `framer-motion` extensively for animations and includes dynamic inline styles (e.g., in `HowItWorks.jsx`). These libraries rely on inline styles to function.
     *   **Dev Mode:** Vite's development server requires inline scripts for Hot Module Replacement (HMR).
 *   **Recommendation:** Add a CSP that **explicitly allows** `unsafe-inline`. For a small business website with no backend authentication handling, this strikes the right balance between functionality and security.
+    *   **Why is this still needed?** Even with `unsafe-inline`, a CSP prevents attackers from loading malicious scripts from **external/unauthorized domains** (e.g., `evil.com/hack.js`) and restricts where your forms can send data (preventing data exfiltration).
     ```html
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://formspree.io; connect-src 'self' https://formspree.io;">
     ```
