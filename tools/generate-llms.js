@@ -86,9 +86,8 @@ function findReactFiles(dir) {
 }
 
 function extractHelmetData(content, filePath, routes) {
-  const cleanedContent = cleanContent(content);
-  
-  if (!EXTRACTION_REGEX.helmetTest.test(cleanedContent)) {
+  // Check raw content first to avoid cleaning issues
+  if (!EXTRACTION_REGEX.helmetTest.test(content)) {
     return null;
   }
   
@@ -96,6 +95,7 @@ function extractHelmetData(content, filePath, routes) {
   if (!helmetMatch) return null;
   
   const helmetContent = helmetMatch[1];
+  // We can clean the extracted helmet content if needed, but title/desc regex usually handles raw ok
   const titleMatch = helmetContent.match(EXTRACTION_REGEX.title);
   const descMatch = helmetContent.match(EXTRACTION_REGEX.description);
   
@@ -151,7 +151,10 @@ function main() {
   let pages = [];
   
   if (!fs.existsSync(pagesDir)) {
-    pages.push(processPageFile(appJsxPath, []));
+    const appPage = processPageFile(appJsxPath, []);
+    if (appPage) {
+      pages.push(appPage);
+    }
   } else {
     const routes = extractRoutes(appJsxPath);
     const reactFiles = findReactFiles(pagesDir);
