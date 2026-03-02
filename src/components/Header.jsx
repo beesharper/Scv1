@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const NavLink = ({ to, children, onClick, className, isMobile = false }) => {
@@ -98,14 +98,17 @@ const Header = () => {
         duration: 0.3
       }} className="md:hidden bg-[#FBF9F6] border-t border-[#D36B5F]/20">
             <div className="container mx-auto px-4 py-6 flex flex-col space-y-4">
-              <NavLink to="showcase" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
+              <NavLink to="showcase" onClick={closeMenu} isMobile={true} className="flex justify-between items-center text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 Our Craft
+                <ChevronRight size={20} className="text-[#D36B5F]/70" />
               </NavLink>
-              <NavLink to="how-it-works" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
+              <NavLink to="how-it-works" onClick={closeMenu} isMobile={true} className="flex justify-between items-center text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 How It Works
+                <ChevronRight size={20} className="text-[#D36B5F]/70" />
               </NavLink>
-              <NavLink to="page-bottom" onClick={closeMenu} isMobile={true} className="text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
+              <NavLink to="page-bottom" onClick={closeMenu} isMobile={true} className="flex justify-between items-center text-[#2F2F2F] hover:text-[#D36B5F] transition-colors font-medium text-left py-2">
                 Contact
+                <ChevronRight size={20} className="text-[#D36B5F]/70" />
               </NavLink>
               <NavLink to="contact" onClick={closeMenu} isMobile={true}>
                 <Button className="bg-[#D36B5F] hover:bg-[#D36B5F]/90 text-white px-6 py-3 rounded-full font-semibold shadow-lg w-full">
